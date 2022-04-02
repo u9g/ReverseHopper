@@ -1,0 +1,4 @@
+ag {
+    hook admingive
+    user player
+}

@@ -1,0 +1,4 @@
+name: ReverseHopper
+version: '${version}'
+main: dev.u9g.reversehopper.ReverseHopper
+api-version: 1.18
