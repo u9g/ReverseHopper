@@ -111,7 +111,7 @@ public class DataBlockUtil {
     }
 
     public static void showInventoryTo (DataBlock block, Player player) {
-        var gui = new InventoryGUI(Bukkit.createInventory(null, 9, Component.text("Reverse Inventory")));
+        var gui = new InventoryGUI(Bukkit.createInventory(null, 9, Component.text("Reverse Hopper")));
         Task.asyncRepeating((task) -> {
             if (gui.getInventory().getViewers().size() == 0) {
                 task.cancel();
