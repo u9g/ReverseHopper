@@ -101,6 +101,7 @@ public class DataBlockUtil {
             block.set(getSlotName(slot), ItemUtils.toString(newStack));
         else
             block.set(getSlotName(slot), "empty");
+        ReverseHopper.INSTANCE.manager.save();
     }
 
     public static void dropAt (DataBlock block, Location location) {

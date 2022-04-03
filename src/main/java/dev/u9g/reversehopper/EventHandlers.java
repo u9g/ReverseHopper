@@ -34,6 +34,7 @@ public class EventHandlers implements Listener {
                 event.setCancelled(true);
             }
         }
+        ReverseHopper.INSTANCE.manager.save();
     }
 
     @EventHandler
@@ -50,6 +51,7 @@ public class EventHandlers implements Listener {
             var loc = event.getBlock().getLocation();
             Task.syncDelayed(() -> {
                 ReverseHopper.INSTANCE.manager.getDataBlock(loc.getBlock(), true).set(Constants.blockKey, true);
+                ReverseHopper.INSTANCE.manager.save();
             });
         }
     }
@@ -59,5 +61,6 @@ public class EventHandlers implements Listener {
         block.setType(Material.AIR);
         player.getInventory().addItem(Constants.item);
         ReverseHopper.INSTANCE.manager.remove(db);
+        ReverseHopper.INSTANCE.manager.save();
     }
 }
