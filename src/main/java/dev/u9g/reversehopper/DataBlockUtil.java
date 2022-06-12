@@ -38,7 +38,7 @@ public class DataBlockUtil {
                 setSlot(block, i, toTakeFrom.asQuantity(1));
                 toTakeFrom.setAmount(toTakeFrom.getAmount()-1);
                 break;
-            } else if (inv[i].getAmount() != 64 && toTakeFrom.isSimilar(inv[i])) {
+            } else if (inv[i].getAmount() != inv[i].getMaxStackSize() && toTakeFrom.isSimilar(inv[i])) {
                 inv[i].setAmount(inv[i].getAmount()+1);
                 setSlot(block, i, inv[i]);
                 toTakeFrom.setAmount(toTakeFrom.getAmount()-1);
@@ -60,7 +60,7 @@ public class DataBlockUtil {
                 toTakeFrom.setAmount(toTakeFrom.getAmount()-1);
                 setSlot(downHopper, slot, toTakeFrom);
                 break;
-            } else if (inv[i].getAmount() != 64 && toTakeFrom.isSimilar(inv[i])) {
+            } else if (inv[i].getAmount() != inv[i].getMaxStackSize() && toTakeFrom.isSimilar(inv[i])) {
                 inv[i].setAmount(inv[i].getAmount()+1);
                 setSlot(upHopper, i, inv[i]);
                 toTakeFrom.setAmount(toTakeFrom.getAmount()-1);

@@ -24,7 +24,7 @@ public class ItemHelper {
         while (iter.hasNext() && addingToStack == null) {
             i++;
             var stack = iter.next();
-            if (needSimilarTo.isSimilar(stack) && stack.getAmount() != 64) {
+            if (needSimilarTo.isSimilar(stack) && stack.getAmount() != stack.getMaxStackSize()) {
                 addingToStack = stack;
             }
         }
